@@ -1,0 +1,599 @@
+Index: web/index.xhtml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- web/index.xhtml	(date 1587742292269)
++++ web/index.xhtml	(date 1587742292269)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
++        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
++<html xmlns="http://www.w3.org/1999/xhtml"
++      xmlns:h="http://xmlns.jcp.org/jsf/html"
++      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
++      xmlns:f="http://xmlns.jcp.org/jsf/core">
++   <f:view>
++      <h:outputLabel value="Hello, world"/>
++   </f:view>
++</html>
+Index: web/WEB-INF/web.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- web/WEB-INF/web.xml	(date 1587742748067)
++++ web/WEB-INF/web.xml	(date 1587742748067)
+@@ -0,0 +1,18 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
++         version="4.0">
++    <servlet>
++        <servlet-name>Faces Servlet</servlet-name>
++        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
++        <load-on-startup>1</load-on-startup>
++    </servlet>
++    <welcome-file-list>
++        <welcome-file>index.xhtml</welcome-file>
++    </welcome-file-list>
++    <servlet-mapping>
++        <servlet-name>Faces Servlet</servlet-name>
++        <url-pattern>*.xhtml</url-pattern>
++    </servlet-mapping>
++</web-app>
+\ No newline at end of file
+Index: web/WEB-INF/faces-config.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- web/WEB-INF/faces-config.xml	(date 1587742292097)
++++ web/WEB-INF/faces-config.xml	(date 1587742292097)
+@@ -0,0 +1,7 @@
++<?xml version='1.0' encoding='UTF-8'?>
++<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
++    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
++    http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
++  
++</faces-config>
+\ No newline at end of file
+Index: web/WEB-INF/beans.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- web/WEB-INF/beans.xml	(date 1587742296941)
++++ web/WEB-INF/beans.xml	(date 1587742296941)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<beans xmlns="http://java.sun.com/xml/ns/javaee"
++       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++       xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/beans_1_0.xsd">
++</beans>
+\ No newline at end of file
+Index: .idea/aprendendo-java-jsf.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/aprendendo-java-jsf.iml	(date 1587743538808)
++++ .idea/aprendendo-java-jsf.iml	(date 1587743538808)
+@@ -0,0 +1,32 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
++  <component name="FacetManager">
++    <facet type="web" name="Web">
++      <configuration>
++        <descriptors>
++          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/WEB-INF/web.xml" />
++        </descriptors>
++        <webroots>
++          <root url="file://$MODULE_DIR$/web" relative="/" />
++        </webroots>
++        <sourceRoots />
++      </configuration>
++    </facet>
++  </component>
++  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11">
++    <output url="file://$MODULE_DIR$/target/classes" />
++    <output-test url="file://$MODULE_DIR$/target/test-classes" />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
++      <excludeFolder url="file://$MODULE_DIR$/target" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" name="Maven: com.sun.faces:jsf-api:2.2.20" level="project" />
++    <orderEntry type="library" scope="PROVIDED" name="Maven: javax:javaee-api:7.0" level="project" />
++    <orderEntry type="library" scope="PROVIDED" name="Maven: com.sun.mail:javax.mail:1.5.0" level="project" />
++    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.activation:activation:1.1" level="project" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(date 1587742369754)
++++ .idea/misc.xml	(date 1587742369754)
+@@ -0,0 +1,16 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="JavaScriptSettings">
++    <option name="languageLevel" value="ES6" />
++  </component>
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/pom.xml" />
++      </list>
++    </option>
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/artifacts/aprendendo_java_jsf_war_exploded.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/artifacts/aprendendo_java_jsf_war_exploded.xml	(date 1587742964619)
++++ .idea/artifacts/aprendendo_java_jsf_war_exploded.xml	(date 1587742964619)
+@@ -0,0 +1,16 @@
++<component name="ArtifactManager">
++  <artifact type="exploded-war" name="aprendendo-java-jsf:war exploded">
++    <output-path>$PROJECT_DIR$/out/artifacts/aprendendo_java_jsf_war_exploded</output-path>
++    <root id="root">
++      <element id="javaee-facet-resources" facet="aprendendo-java-jsf/web/Web" />
++      <element id="directory" name="WEB-INF">
++        <element id="directory" name="classes">
++          <element id="module-output" name="aprendendo-java-jsf" />
++        </element>
++        <element id="directory" name="lib">
++          <element id="library" level="project" name="Maven: com.sun.faces:jsf-api:2.2.20" />
++        </element>
++      </element>
++    </root>
++  </artifact>
++</component>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(date 1587742297401)
++++ .idea/vcs.xml	(date 1587742297401)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(date 1587742297457)
++++ .idea/modules.xml	(date 1587742297457)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/aprendendo-java-jsf.iml" filepath="$PROJECT_DIR$/.idea/aprendendo-java-jsf.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/.gitignore	(date 1587742298057)
++++ .idea/.gitignore	(date 1587742298057)
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
++# Editor-based HTTP Client requests
++/httpRequests/
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- pom.xml	(date 1587743507533)
++++ pom.xml	(date 1587743507533)
+@@ -0,0 +1,39 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>groupId</groupId>
++    <artifactId>aprendendo-java-jsf</artifactId>
++    <version>1.0-SNAPSHOT</version>
++
++    <build>
++        <plugins>
++            <plugin>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-compiler-plugin</artifactId>
++                <version>3.8.0</version>
++                <configuration>
++                    <source>11.0</source>
++                    <target>11.0</target>
++                </configuration>
++            </plugin>
++        </plugins>
++    </build>
++    <dependencies>
++        <dependency>
++            <groupId>com.sun.faces</groupId>
++            <artifactId>jsf-api</artifactId>
++            <version>2.2.20</version>
++        </dependency>
++        <dependency>
++            <groupId>javax</groupId>
++            <artifactId>javaee-api</artifactId>
++            <version>7.0</version>
++            <scope>provided</scope>
++        </dependency>
++    </dependencies>
++
++    
++</project>
+\ No newline at end of file
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/compiler.xml	(date 1587742575233)
++++ .idea/compiler.xml	(date 1587742575233)
+@@ -0,0 +1,16 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <annotationProcessing>
++      <profile name="Maven default annotation processors profile" enabled="true">
++        <sourceOutputDir name="target/generated-sources/annotations" />
++        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
++        <module name="aprendendo-java-jsf" />
++      </profile>
++    </annotationProcessing>
++    <bytecodeTargetLevel>
++      <module name="aprendendo-java-jsf" target="11.0" />
++    </bytecodeTargetLevel>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/jarRepositories.xml	(date 1587742403264)
++++ .idea/jarRepositories.xml	(date 1587742403264)
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RemoteRepositoriesConfiguration">
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Central Repository" />
++      <option name="url" value="https://repo.maven.apache.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Maven Central repository" />
++      <option name="url" value="https://repo1.maven.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="jboss.community" />
++      <option name="name" value="JBoss Community repository" />
++      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
++    </remote-repository>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_sun_faces_jsf_api_2_2_20.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__com_sun_faces_jsf_api_2_2_20.xml	(date 1587742748747)
++++ .idea/libraries/Maven__com_sun_faces_jsf_api_2_2_20.xml	(date 1587742748747)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.sun.faces:jsf-api:2.2.20">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/sun/faces/jsf-api/2.2.20/jsf-api-2.2.20.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/sun/faces/jsf-api/2.2.20/jsf-api-2.2.20-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/sun/faces/jsf-api/2.2.20/jsf-api-2.2.20-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: out/artifacts/aprendendo_java_jsf_war_exploded/WEB-INF/faces-config.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- out/artifacts/aprendendo_java_jsf_war_exploded/WEB-INF/faces-config.xml	(date 1587742838751)
++++ out/artifacts/aprendendo_java_jsf_war_exploded/WEB-INF/faces-config.xml	(date 1587742838751)
+@@ -0,0 +1,7 @@
++<?xml version='1.0' encoding='UTF-8'?>
++<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
++    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
++    http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
++  
++</faces-config>
+\ No newline at end of file
+Index: out/artifacts/aprendendo_java_jsf_war_exploded/index.xhtml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- out/artifacts/aprendendo_java_jsf_war_exploded/index.xhtml	(date 1587742838703)
++++ out/artifacts/aprendendo_java_jsf_war_exploded/index.xhtml	(date 1587742838703)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
++        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
++<html xmlns="http://www.w3.org/1999/xhtml"
++      xmlns:h="http://xmlns.jcp.org/jsf/html"
++      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
++      xmlns:f="http://xmlns.jcp.org/jsf/core">
++   <f:view>
++      <h:outputLabel value="Hello, world"/>
++   </f:view>
++</html>
+Index: out/artifacts/aprendendo_java_jsf_war_exploded/WEB-INF/web.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- out/artifacts/aprendendo_java_jsf_war_exploded/WEB-INF/web.xml	(date 1587742838643)
++++ out/artifacts/aprendendo_java_jsf_war_exploded/WEB-INF/web.xml	(date 1587742838643)
+@@ -0,0 +1,18 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
++         version="4.0">
++    <servlet>
++        <servlet-name>Faces Servlet</servlet-name>
++        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
++        <load-on-startup>1</load-on-startup>
++    </servlet>
++    <welcome-file-list>
++        <welcome-file>index.xhtml</welcome-file>
++    </welcome-file-list>
++    <servlet-mapping>
++        <servlet-name>Faces Servlet</servlet-name>
++        <url-pattern>*.xhtml</url-pattern>
++    </servlet-mapping>
++</web-app>
+\ No newline at end of file
+Index: out/artifacts/aprendendo_java_jsf_war_exploded/META-INF/MANIFEST.MF
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- out/artifacts/aprendendo_java_jsf_war_exploded/META-INF/MANIFEST.MF	(date 1587742838503)
++++ out/artifacts/aprendendo_java_jsf_war_exploded/META-INF/MANIFEST.MF	(date 1587742838503)
+@@ -0,0 +1,5 @@
++Manifest-Version: 1.0
++Created-By: IntelliJ IDEA
++Built-By: jr
++Build-Jdk: 11.0.7
++
+Index: out/artifacts/aprendendo_java_jsf_war_exploded/WEB-INF/beans.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- out/artifacts/aprendendo_java_jsf_war_exploded/WEB-INF/beans.xml	(date 1587742838627)
++++ out/artifacts/aprendendo_java_jsf_war_exploded/WEB-INF/beans.xml	(date 1587742838627)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<beans xmlns="http://java.sun.com/xml/ns/javaee"
++       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++       xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/beans_1_0.xsd">
++</beans>
+\ No newline at end of file
+Index: src/main/java/br/com/devdojo/maratonajsf/bean/estudante/EstudanteRegistrarBean.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/br/com/devdojo/maratonajsf/bean/estudante/EstudanteRegistrarBean.java	(date 1587744079284)
++++ src/main/java/br/com/devdojo/maratonajsf/bean/estudante/EstudanteRegistrarBean.java	(date 1587744079284)
+@@ -0,0 +1,19 @@
++package br.com.devdojo.maratonajsf.bean.estudante;
++
++import br.com.devdojo.maratonajsf.model.Estudante;
++
++import javax.inject.Named;
++
++@Named
++public class EstudanteRegistrarBean {
++
++    private Estudante estudante;
++
++    public Estudante getEstudante() {
++        return estudante;
++    }
++
++    public void setEstudante(Estudante estudante) {
++        this.estudante = estudante;
++    }
++}
+Index: .idea/libraries/Maven__com_sun_mail_javax_mail_1_5_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__com_sun_mail_javax_mail_1_5_0.xml	(date 1587743538880)
++++ .idea/libraries/Maven__com_sun_mail_javax_mail_1_5_0.xml	(date 1587743538880)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.sun.mail:javax.mail:1.5.0">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/sun/mail/javax.mail/1.5.0/javax.mail-1.5.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/sun/mail/javax.mail/1.5.0/javax.mail-1.5.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/sun/mail/javax.mail/1.5.0/javax.mail-1.5.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__javax_activation_activation_1_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__javax_activation_activation_1_1.xml	(date 1587743538948)
++++ .idea/libraries/Maven__javax_activation_activation_1_1.xml	(date 1587743538948)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: javax.activation:activation:1.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__javax_javaee_api_7_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__javax_javaee_api_7_0.xml	(date 1587743539020)
++++ .idea/libraries/Maven__javax_javaee_api_7_0.xml	(date 1587743539020)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: javax:javaee-api:7.0">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: src/main/java/br/com/devdojo/maratonajsf/model/Estudante.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/br/com/devdojo/maratonajsf/model/Estudante.java	(date 1587744059805)
++++ src/main/java/br/com/devdojo/maratonajsf/model/Estudante.java	(date 1587744059805)
+@@ -0,0 +1,54 @@
++package br.com.devdojo.maratonajsf.model;
++
++import br.com.devdojo.maratonajsf.model.enums.Turno;
++
++public class Estudante {
++
++    private String nome = "junior";
++    private String sobrenome = "ferreira";
++    private double nota1;
++    private double nota2;
++    private double nota3 = 10;
++    private Turno turno = Turno.matutino;
++
++
++    public String getNome() {
++        return nome;
++    }
++
++    public void setNome(String nome) {
++        this.nome = nome;
++    }
++
++    public String getSobrenome() {
++        return sobrenome;
++    }
++
++    public void setSobrenome(String sobrenome) {
++        this.sobrenome = sobrenome;
++    }
++
++    public double getNota1() {
++        return nota1;
++    }
++
++    public void setNota1(double nota1) {
++        this.nota1 = nota1;
++    }
++
++    public double getNota2() {
++        return nota2;
++    }
++
++    public void setNota2(double nota2) {
++        this.nota2 = nota2;
++    }
++
++    public double getNota3() {
++        return nota3;
++    }
++
++    public void setNota3(double nota3) {
++        this.nota3 = nota3;
++    }
++}
+Index: src/main/java/br/com/devdojo/maratonajsf/model/enums/Turno.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/br/com/devdojo/maratonajsf/model/enums/Turno.java	(date 1587744006555)
++++ src/main/java/br/com/devdojo/maratonajsf/model/enums/Turno.java	(date 1587744006555)
+@@ -0,0 +1,6 @@
++package br.com.devdojo.maratonajsf.model.enums;
++
++public enum  Turno {
++
++    matutino,vespertino,noturno
++}
