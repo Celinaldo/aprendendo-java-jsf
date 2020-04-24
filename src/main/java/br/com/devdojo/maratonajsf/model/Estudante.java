@@ -11,6 +11,13 @@ public class Estudante {
     private double nota3 = 10;
     private Turno turno = Turno.matutino;
 
+    public Turno getTurno() {
+        return turno;
+    }
+
+    public void setTurno(Turno turno) {
+        this.turno = turno;
+    }
 
     public String getNome() {
         return nome;
