@@ -6,7 +6,7 @@ public class Estudante {
 
     private String nome = "junior";
     private String sobrenome = "ferreira";
-    private double nota1;
+    private double nota1 = 8;
     private double nota2;
     private double nota3 = 10;
     private Turno turno = Turno.matutino;
